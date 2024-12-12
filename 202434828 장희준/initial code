@@ -9,7 +9,7 @@ def calculate_speed(p1, p2, fps):
     return speed
 
 # Initialize video capture
-video_path = 'video.mp4'  # Replace with your video file path
+video_path = 'trapic video.mp4'  # Replace with your video file path
 cap = cv2.VideoCapture(video_path)
 
 if not cap.isOpened():
@@ -34,7 +34,7 @@ output_layers = [layer_names[i - 1] for i in net.getUnconnectedOutLayers()]
 
 # Variables for tracking
 tracking_data = {}  # Store positions of detected vehicles
-line_position = int(frame_height * 0.6)  # Define a horizontal line for counting vehicles
+line_position = int(frame_height * 0.8)  # Define a horizontal line for counting vehicles
 vehicle_count = 0
 
 # Process each frame
@@ -75,7 +75,7 @@ while cap.isOpened():
     indices = cv2.dnn.NMSBoxes(boxes, confidence_scores, 0.5, 0.4)
 
     # Draw bounding boxes and track objects
-    for i in indices.flatten():
+    for i in indices:
         x, y, w, h = boxes[i]
         center = (x + w // 2, y + h // 2)
 
@@ -114,3 +114,12 @@ cap.release()
 cv2.destroyAllWindows()
 
 print(f"Total vehicles counted: {vehicle_count}")
+
+if vehicle_count < 10:
+    congestion_status = "traffic congestion: low"
+elif 10 <= vehicle_count < 20:
+    congestion_status = "traffic congestion: medium"
+else:
+    congestion_status = "traffic congestion: high"
+
+print(f"traffic congestion: {congestion_status}")
