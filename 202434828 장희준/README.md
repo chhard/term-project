@@ -10,8 +10,10 @@ It aims to address traffic management challenges such as **traffic flow analysis
 
 ### Demo and Example
 #### Example Output
-A screenshot or video demonstrating real-time vehicle detection and counting can be added here.  
-For example: *Vehicles are detected in real time, and those crossing a defined line are counted.*
+![opensource result](https://github.com/user-attachments/assets/59d2744e-7411-4d6f-9dfa-045235b3fa6d)
+![opensouce result2](https://github.com/user-attachments/assets/b06c589d-227d-4e31-a693-76ea4cc5cab5)
+
+
 
 ---
 
@@ -30,7 +32,7 @@ This project requires the following:
 These files can be downloaded from the official YOLO website or similar resources.
 
 #### Input Video
-An input video file (`video.mp4`) to analyze vehicle movements.
+An input video file (`trapic video.mp4`) to analyze vehicle movements.
 
 ---
 
@@ -49,7 +51,7 @@ An input video file (`video.mp4`) to analyze vehicle movements.
      ```
 
 4. **View Results**
-   - The system will process the video, detect vehicles, and count those crossing the defined line in real time.
+   - The system will process the video, detect vehicles, and count those crossing the defined line in real time. And code will output the traffic congestion according to the number of vehicles.
 
 ---
 
