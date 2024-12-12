@@ -41,7 +41,7 @@ An input video file (`trapic video.mp4`) to analyze vehicle movements.
    - Place `yolov3.cfg`, `yolov3.weights`, and `coco.names.txt` in the project directory.
 
 2. **Set Up Input Video**
-   - Ensure that the input video (`video.mp4`) is located in the same directory or update the file path in the script.
+   - Ensure that the input video (`trapic video.mp4`) is located in the same directory or update the file path in the script.
 
 3. **Run the Script**
    - Save the provided Python code into a file named `vehicle_detection.py`.
